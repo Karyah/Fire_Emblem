@@ -1,0 +1,47 @@
+<html>
+	<head>
+	<meta charset = "UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	</head>
+	<body> 
+	
+		
+		<div class= "container">		
+		
+		<div class="p-4 mb-2 bg-body-tertiary rounded-3">
+			<div class="container-fluid py-5">
+				<h1 class="display-5 fw-bold">Todos os personagem</h1> 
+			</div>
+		</div>
+		      	
+		      
+		<div class="card mb-3" th:each="personagem : ${personagens}">
+			
+			<div class="card-header" th:text=${personagem.nome}>Nome do Personagem</div>
+			
+			<div class="card-body">
+                    <div class="row">
+                    
+						<div class="col-md-5">Idade: <span th:text=${personagem.idade}>22</span></div>		                    	                 	
+						<div class="col-md-5">Classe: <span th:text=${personagem.classe}>Bardo</span></div>
+						<nav>
+							<ul>
+								<li> <b>HP </b>  <span th:text=${personagem.hp}>22/22</span></li>
+								<li> <b>STR </b> <span th:text=${personagem.str}>5</span> </li>
+								<li> <b>MAG</b> <span th:text=${personagem.mag}>0</span> </li>
+								<li> <b>DEF</b> <span th:text=${personagem.def}>9</span> </li>
+								<li> <b>RES</b> <span th:text=${personagem.res}>9</span> </li>
+								<li> <b>SKL</b> <span th:text=${personagem.skl}>9</span> </li>
+								<li> <b>SPD</b> <span th:text=${personagem.spd}>9</span> </li>
+								<li> <b>LUK</b> <span th:text=${personagem.luk}>9</span> </li>
+							</ul>
+						</nav>		
+        	</div>
+        	</div>
+        </div>
+       </div>
+
+	</body>
+</html>
+     
+     
